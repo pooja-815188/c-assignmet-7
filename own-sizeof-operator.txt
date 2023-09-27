@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define MySizeOf(var) (char*)(&var + 1) - (char*)(&var)
+int main()
+{
+    short num1;
+    int num2 ;
+    long num3 ;
+    char ch ;
+
+    printf("Size of num1: %ld\n", MySizeOf(num1));
+    printf("Size of num2: %ld\n", MySizeOf(num2));
+    printf("Size of num3: %ld\n", MySizeOf(num3));
+    printf("Size of ch : %ld\n", MySizeOf(ch));
+
+    return 0;
+}
